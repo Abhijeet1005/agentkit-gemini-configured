@@ -8,6 +8,7 @@ import {
   walletActionProvider,
   WalletProvider,
   wethActionProvider,
+  twitterActionProvider,
 } from "@coinbase/agentkit";
 import * as fs from "fs";
 
@@ -91,6 +92,12 @@ export async function prepareAgentkitAndWalletProvider(): Promise<{
         wethActionProvider(),
         pythActionProvider(),
         walletActionProvider(),
+        twitterActionProvider({
+          apiKey: process.env.TWITTER_API_KEY,
+          apiSecret: process.env.TWITTER_API_KEY_SECRET,
+          accessToken: process.env.TWITTER_ACCESS_TOKEN,
+          accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+        }),
         erc20ActionProvider(),
         cdpApiActionProvider({
           apiKeyId: process.env.CDP_API_KEY_ID,

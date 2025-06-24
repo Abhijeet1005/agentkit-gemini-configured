@@ -49,7 +49,7 @@ export async function createAgent(): Promise<ReturnType<typeof createReactAgent>
   try {
     // Initialize LLM: https://platform.openai.com/docs/models#gpt-4o
     const llm = new ChatGoogleGenerativeAI({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash-exp",
       maxOutputTokens: 2048,
     });
 

@@ -12,11 +12,7 @@ First, install dependencies:
 npm install
 ```
 
-Then, configure your environment variables:
-
-```sh
-mv .env.local .env
-```
+Then, configure your environment variables in .env
 
 Run the development server:
 
